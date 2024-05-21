@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dodaj receptę</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"],
+        input[type="date"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dodaj receptę</h1>
+    <form method="post" action="/recepty">
+        <label>
+            ID_Recepty <input type="number" name="ID_Recepty" required><br>
+            Data_Wystawienia <input type="date" name="Data_Wystawienia" required><br>
+            ID_Pacjenta <input type="number" name="ID_Pacjenta" required><br>
+            ID_Lekarza <input type="number" name="ID_Lekarza" required><br>
+            <button type="submit">Zapisz zmiany</button>
+        </label>
+        <a href="/">Powrót</a>
+    </form>
+
+</body>
+</html>
